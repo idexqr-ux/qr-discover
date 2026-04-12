@@ -1,1 +1,145 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Two Artefacts, One Pair of Hands — Discover</title>
+  <meta name="description" content="A calm, spoken-first guide for two museum artefacts: gloves and a sewing needle." />
+  <link rel="stylesheet" href="style.css?v=3" />
+</head>
 
+<body>
+  <a id="top"></a>
+
+  <header class="wrap hero" style="text-align: center;">
+    <p class="kicker">Discover</p>
+    <h1>Two Artefacts, One Pair of Hands</h1>
+    <p class="sub">
+      Leather gloves and a sewing needle used in glove-making, circa 1830 to 1850
+    </p>
+  </header>
+
+  <main class="wrap">
+    <section aria-labelledby="page-title">
+      <h1 id="page-title" class="sr-only">Museum artefact guide</h1>
+      <p class="sr-only">
+        You have opened the museum guide for two artefacts — a pair of ladies’ leather gloves and a sewing needle.
+        This page will help you explore how they were made and used.
+      </p>
+    </section>
+
+    <section class="hero">
+      <img src="images/museum-logo.png" alt="" class="museum-logo">
+      <img src="images/gloves.jpg" alt="" class="object-image">
+    </section>
+
+    <p class="muted-line">Two artefacts, held in time.</p>
+
+    <div class="listen-group">
+      <button class="quiet-button" type="button" onclick="playEmbeddedAudio('museumAudio')">
+        Museum — note
+      </button>
+    </div>
+
+    <section id="gloves" class="card">
+      <details class="card-details" ontoggle="if(this.open) playEmbeddedAudio('glovesAudio')">
+        <summary class="card-summary quiet-button">Ladies’ Fine Gloves</summary>
+
+        <div class="sr-only">
+          <p>
+            In front of you is a pair of ladies’ leather gloves, made around 1830 to 1850.
+            The leather is thin and supple, and the seams along the fingers are stitched by hand.
+            They narrow gently at the wrist and were made to be worn close to the skin.
+          </p>
+
+          <p>
+            They are made from fine leather, often lamb or kid skin, chosen because it could be cut thin without tearing and would stretch slightly with wear.
+          </p>
+
+          <p>
+            Each glove was cut by hand and stitched finger by finger with fine thread.
+            The work required good light, steady hands, and patience.
+          </p>
+
+          <p>
+            Gloves like these were worn for walking, visiting, church, and travel.
+            They were practical, but also carried a quiet sense of care and refinement.
+          </p>
+
+          <p>
+            These gloves show the quiet skill behind everyday life — not only the hands that wore them, but the hands that made them.
+          </p>
+        </div>
+      </details>
+    </section>
+
+    <section id="needle" class="card">
+      <details class="card-details" ontoggle="if(this.open) playEmbeddedAudio('needleAudio')">
+        <summary class="card-summary quiet-button">Steel Sewing Needle</summary>
+
+        <div class="sr-only">
+          <p>
+            In front of you is a steel sewing needle, made around 1830 to 1850.
+            It is small, sharp, and easy to miss, with a tiny eye for thread.
+            It fits easily between finger and thumb and would have been used thousands of times.
+          </p>
+
+          <p>
+            It is made from hardened steel, polished so it could pass smoothly through leather.
+          </p>
+
+          <p>
+            It was threaded and pulled through leather again and again to sew gloves by hand.
+            The work was repetitive and precise.
+          </p>
+
+          <p>
+            It was most often used by women working at home, fitting paid sewing around daily responsibilities.
+          </p>
+
+          <p>
+            This needle represents invisible labour — the process between raw material and finished artefact.
+          </p>
+        </div>
+      </details>
+    </section>
+
+    <p class="powered-by">Powered by IdexQR</p>
+
+    <footer class="footer">
+      <a href="index.html" class="back-link">Back to Discover</a>
+    </footer>
+  </main>
+
+  <audio id="museumAudio" src="audio/arrival-v2.mp3" preload="auto"></audio>
+  <audio id="glovesAudio" src="audio/gloves.mp3" preload="auto"></audio>
+  <audio id="needleAudio" src="audio/needle.mp3" preload="auto"></audio>
+
+  <script>
+    let currentAudio = null;
+
+    function stopCurrentAudio() {
+      if (currentAudio) {
+        currentAudio.pause();
+        currentAudio.currentTime = 0;
+      }
+    }
+
+    function playEmbeddedAudio(id) {
+      stopCurrentAudio();
+      currentAudio = document.getElementById(id);
+
+      if (!currentAudio) return;
+
+      currentAudio.currentTime = 0;
+
+      const playPromise = currentAudio.play();
+      if (playPromise !== undefined) {
+        playPromise.catch(err => {
+          console.error("Embedded audio failed:", id, err);
+        });
+      }
+    }
+  </script>
+</body>
+</html>
