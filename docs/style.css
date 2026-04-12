@@ -33,7 +33,11 @@ body {
 .hero {
   text-align: center;
   margin-top: 6px;
-  margin-bottom: 1.25rem;
+  margin-bottom: 1.4rem;
+}
+
+.hero img + img {
+  margin-top: 0.5rem;   /* space between logo and image */
 }
 
 .kicker {
@@ -150,4 +154,22 @@ h2 {
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border: 0;
+}
+
+.museum-logo {
+  display: block;
+  max-width: 90px;       /* smaller than before */
+  width: 100%;
+  height: auto;
+  margin: 0 auto 0.6rem; /* tighter spacing below */
+  opacity: 0.9;          /* softens it slightly */
+}
+
+.object-image {
+  display: block;
+  max-width: 460px;      /* slightly larger presence */
+  width: 92%;
+  height: auto;
+  margin: 0 auto 1.4rem; /* a little more breathing room */
+  border-radius: 16px;
 }
