@@ -108,6 +108,8 @@ h2 {
   text-decoration: none;
   min-width: 220px;
   text-align: center;
+
+  margin: 10px 0;   /* 👈 add this */
 }
 
 .quiet-button:hover,
@@ -172,4 +174,14 @@ h2 {
   height: auto;
   margin: 0 auto 1.4rem; /* a little more breathing room */
   border-radius: 16px;
+}
+
+.intro {
+  margin: 10px 0 14px;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+section.wrap h2 {
+  margin-top: 24px;
 }
