@@ -183,7 +183,9 @@ h2 {
   font-size: 0.95rem;
 }
 
-
+p.sr-only {
+  display: none !important;
+}
 section.wrap h2 {
   margin-top: 24px;
 }
