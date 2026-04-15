@@ -3,40 +3,26 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Two Artefacts, One Pair of Hands — Discover</title>
-  <meta name="description" content="A calm, spoken-first guide for two museum artefacts: gloves and a sewing needle." />
-  <link rel="stylesheet" href="style.css?v=16" />
+  <title>Discover Test</title>
+  <link rel="stylesheet" href="style.css?v=17" />
 </head>
 
 <body>
-  <a id="top"></a>
-
   <main>
-  <header class="wrap hero" style="text-align: center;">
-    <h1 class="light-heading">Radius Museum</h1>
+    <header class="wrap hero" style="text-align: center;">
+      <h1 class="light-heading">Radius Museum</h1>
 
-    <p class="intro">
-      Two artefacts, held in time.
-    </p>
+      <p class="intro">
+        Two artefacts, held in time.
+      </p>
 
-    <button type="button" class="quiet-button" onclick="playEmbeddedAudio('museumAudio')">
-      Discover this guide
-    </button>
-  </header>
-
-    <p class="sr-only">BANANA ONE</p>
-<p class="sr-only">BANANA TWO</p>
-
-    <p class="powered-by">Powered by IdexQR</p>
-
-    <footer class="footer">
-      <a href="#top" class="back-link">Back to top</a>
-    </footer>
+      <button type="button" class="quiet-button" onclick="playEmbeddedAudio('museumAudio')">
+        Discover this guide
+      </button>
+    </header>
   </main>
 
   <audio id="museumAudio" src="audio/arrival.mp3" preload="auto"></audio>
-  <audio id="glovesAudio" src="audio/gloves.mp3" preload="auto"></audio>
-  <audio id="needleAudio" src="audio/needle.mp3" preload="auto"></audio>
 
   <script>
     let currentAudio = null;
@@ -51,17 +37,9 @@
     function playEmbeddedAudio(id) {
       stopCurrentAudio();
       currentAudio = document.getElementById(id);
-
       if (!currentAudio) return;
-
       currentAudio.currentTime = 0;
-
-      const playPromise = currentAudio.play();
-      if (playPromise !== undefined) {
-        playPromise.catch(err => {
-          console.error("Embedded audio failed:", id, err);
-        });
-      }
+      currentAudio.play().catch(() => {});
     }
   </script>
 </body>
