@@ -3,17 +3,25 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Discover Test</title>
-  <link rel="stylesheet" href="style.css?v=22" />
+  <title>Discover</title>
+  <link rel="stylesheet" href="style.css?v=23" />
 </head>
+
 <body>
   <main>
+
+    <!-- HEADER -->
     <header class="wrap hero" style="text-align: center;">
+      
+      <img src="images/museum-logo.png" alt="" class="museum-logo" />
+
       <h1 class="light-heading">Radius Museum</h1>
 
       <p class="intro">
         Two artefacts, held in time.
       </p>
+
+      <img src="images/gloves.jpg" alt="" class="object-image" />
 
       <button
         type="button"
@@ -22,54 +30,38 @@
         Discover this guide
       </button>
 
-      <section class="wrap">
-  <h2>Gloves</h2>
-
-  <p id="gloves-intro" class="sr-only">
-  A pair of ladies’ leather gloves, made around eighteen thirty to eighteen fifty.
-</p>
-      
-      <button
-  type="button"
-  class="quiet-button"
-  onclick="playEmbeddedAudio('glovesAudio')"
-  aria-describedby="gloves-intro">
-  Discover the gloves
-</button>
-
-      <p>
-  Made from fine leather, often lamb or kid, the material is thin and supple, softening slightly with wear.
-</p>
-
-<p>
-  This allowed the gloves to sit close to the skin, making them well suited to everyday use.
-</p>
-
-<p>
-  Each glove was cut by hand and stitched finger by finger, using fine thread, with decorative stitching across the back.
-</p>
-
-<p>
-  The shape narrows gently at the wrist, designed to follow the form of the hand.
-</p>
-
-<p>
-  The work required good light, steady hands, and patience.
-</p>
-
-<p>
-  Gloves like these were worn for walking, visiting, church, and travel — not only practical, but a subtle sign of refinement.
-</p>
-
-<p>
-  In these gloves lives the quiet skill of everyday life — not only the hands that wore them, but the hands that made them.
-</p>
     </header>
-    
-</section>
+
+    <!-- CONTENT -->
+    <section class="wrap">
+
+      <h2>Gloves</h2>
+
+      <button
+        type="button"
+        class="quiet-button"
+        onclick="playEmbeddedAudio('glovesAudio')">
+        Discover the gloves
+      </button>
+
+      <p class="sr-only">
+        A pair of ladies’ leather gloves, made around eighteen thirty to eighteen fifty.
+        Made from fine leather, often lamb or kid, the material is thin and supple, softening slightly with wear.
+        This allowed the gloves to sit close to the skin, making them well suited to everyday use.
+        Each glove was cut by hand and stitched finger by finger, using fine thread, with decorative stitching across the back.
+        The shape narrows gently at the wrist, designed to follow the form of the hand.
+        The work required good light, steady hands, and patience.
+        Gloves like these were worn for walking, visiting, church, and travel — not only practical, but a subtle sign of refinement.
+        In these gloves lives the quiet skill of everyday life — not only the hands that wore them, but the hands that made them.
+      </p>
+
+    </section>
+
   </main>
 
+  <!-- AUDIO -->
   <audio id="museumAudio" src="audio/arrival.mp3" preload="auto"></audio>
+  <audio id="glovesAudio" src="audio/gloves.mp3" preload="auto"></audio>
 
   <script>
     let currentAudio = null;
@@ -89,5 +81,6 @@
       currentAudio.play().catch(() => {});
     }
   </script>
+
 </body>
 </html>
