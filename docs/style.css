@@ -183,6 +183,7 @@ h2 {
   font-size: 0.95rem;
 }
 
+/* FORCE hide screen reader text */
 p.sr-only {
   display: none !important;
 }
