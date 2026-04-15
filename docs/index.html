@@ -3,29 +3,113 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Discover Test</title>
+  <title>Two Artefacts, One Pair of Hands — Discover</title>
+  <meta name="description" content="A calm, spoken-first guide for two museum artefacts: gloves and a sewing needle." />
   <link rel="stylesheet" href="style.css?v=18" />
 </head>
 
 <body>
+  <a id="top"></a>
+
   <main>
     <header class="wrap hero" style="text-align: center;">
-      <img src="images/museum-logo-v2.png" alt="Radius Museum logo" class="museum-logo" />
+      <img src="images/museum-logo.png" alt="" class="museum-logo" />
+
       <h1 class="light-heading">Radius Museum</h1>
 
       <p class="intro">
         Two artefacts, held in time.
       </p>
 
-<img src="images/gloves-v2.jpg" alt="Ladies’ leather gloves and sewing needle" class="object-image" />
-      
+      <img src="images/gloves.jpg" alt="" class="object-image" />
+
       <button type="button" class="quiet-button" onclick="playEmbeddedAudio('museumAudio')">
         Discover this guide
       </button>
     </header>
+
+    <section class="wrap">
+      <h2>Gloves</h2>
+
+      <button type="button" class="quiet-button" onclick="playEmbeddedAudio('glovesAudio')">
+        Discover the gloves
+      </button>
+
+      <p>
+        A pair of ladies’ leather gloves, made around eighteen thirty to eighteen fifty.
+      </p>
+
+      <p>
+        Made from fine leather, often lamb or kid, the material is thin and supple, softening slightly with wear.
+      </p>
+
+      <p>
+        This allowed the gloves to sit close to the skin, making them well suited to everyday use.
+      </p>
+
+      <p>
+        Each glove was cut by hand and stitched finger by finger, using fine thread, with decorative stitching across the back.
+      </p>
+
+      <p>
+        The shape narrows gently at the wrist, designed to follow the form of the hand.
+      </p>
+
+      <p>
+        The work required good light, steady hands, and patience.
+      </p>
+
+      <p>
+        Gloves like these were worn for walking, visiting, church, and travel — not only practical, but a subtle sign of refinement.
+      </p>
+
+      <p>
+        In these gloves lives the quiet skill of everyday life — not only the hands that wore them, but the hands that made them.
+      </p>
+
+      <h2>Needle</h2>
+
+      <button type="button" class="quiet-button" onclick="playEmbeddedAudio('needleAudio')">
+        Discover the needle
+      </button>
+
+      <p>
+        Small, sharp, and easily missed, with a tiny eye for thread.
+      </p>
+
+      <p>
+        It fits between finger and thumb, and would have been used thousands of times.
+      </p>
+
+      <p>
+        Made from hardened steel and carefully polished, it could pass smoothly through thin leather.
+      </p>
+
+      <p>
+        Drawn through the material again and again, it was used to sew gloves by hand — repetitive and precise.
+      </p>
+
+      <p>
+        Most often, this work was done by women at home, fitting paid sewing around daily responsibilities.
+      </p>
+
+      <p>
+        This needle reflects the unseen labour between raw material and finished artefact.
+      </p>
+    </section>
+
+    <div class="wrap footer-wrap">
+      <p class="powered-by">Powered by IdexQR</p>
+    </div>
+
+    <footer class="footer">
+      <a href="#top" class="back-link">Back to top</a>
+    </footer>
   </main>
 
   <audio id="museumAudio" src="audio/arrival.mp3" preload="auto"></audio>
+  <audio id="glovesAudio" src="audio/gloves.mp3" preload="auto"></audio>
+  <audio id="needleAudio" src="audio/needle.mp3" preload="auto"></audio>
 
   <script>
     let currentAudio = null;
@@ -40,9 +124,17 @@
     function playEmbeddedAudio(id) {
       stopCurrentAudio();
       currentAudio = document.getElementById(id);
+
       if (!currentAudio) return;
+
       currentAudio.currentTime = 0;
-      currentAudio.play().catch(() => {});
+
+      const playPromise = currentAudio.play();
+      if (playPromise !== undefined) {
+        playPromise.catch(err => {
+          console.error("Embedded audio failed:", id, err);
+        });
+      }
     }
   </script>
 </body>
