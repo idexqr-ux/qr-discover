@@ -170,7 +170,7 @@ h2 {
 
 .object-image {
   display: block;
-  max-width: 50%;
+  max-width: 55%;
   height: auto;
   margin: 1.5rem auto;
   border-radius: 16px;
@@ -182,8 +182,8 @@ h2 {
 }
 
 .object-image.needle-image {
-  max-width: 30%;   /* ⬅️ smaller than gloves */
-  opacity: 0.80;    /* slight softening */
+  max-width: 45%;   /* ⬅️ smaller than gloves */
+  opacity: 0.95;    /* slight softening */
 }
 
 .intro {
