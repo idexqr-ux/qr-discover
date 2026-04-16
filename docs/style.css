@@ -182,7 +182,7 @@ h2 {
 }
 
 .object-image.needle-image {
-  max-width: 10%;   /* ⬅️ smaller than gloves */
+  max-width: 30%;   /* ⬅️ smaller than gloves */
   opacity: 0.80;    /* slight softening */
 }
 
