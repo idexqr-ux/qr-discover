@@ -186,11 +186,6 @@ h2 {
   opacity: 0.95;    /* slight softening */
 }
 
-.needle-block {
-  max-width: 380px;   /* ⬅️ controls overall width */
-  margin: 0 auto;     /* centres it */
-}
-
 .intro {
   margin: 10px 0 14px;
   color: var(--muted);
