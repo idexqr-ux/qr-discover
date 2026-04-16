@@ -206,3 +206,8 @@ section.wrap h2 {
 .discover-text.intro-text {
   text-align: center;
 }
+
+.quiet-button.center {
+  display: block;
+  margin: 2rem auto 0;
+}
