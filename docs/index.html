@@ -26,9 +26,17 @@
       <button
         type="button"
         class="quiet-button"
-        onclick="playEmbeddedAudio('museumAudio')">
+        onclick="playSection('museumAudio', 'museumText')">
         Let's discover
       </button>
+
+      <div id="museumText" class="discover-text" hidden>
+        <p>
+          You have opened the museum guide for two artefacts.
+          A pair of ladies’ gloves, and a steel sewing needle.
+          Each one tells a quiet story of making, use, and everyday life.
+        </p>
+      </div>
 
     </header>
 
@@ -40,9 +48,22 @@
       <button
         type="button"
         class="quiet-button"
-        onclick="playEmbeddedAudio('glovesAudio')">
+        onclick="playSection('glovesAudio', 'glovesText')">
         Discover the gloves
       </button>
+
+      <div id="glovesText" class="discover-text" hidden>
+        <p>
+          A pair of ladies’ leather gloves, made around eighteen thirty to eighteen fifty.
+          Made from fine leather, often lamb or kid, the material is thin and supple, softening slightly with wear.
+          This allowed the gloves to sit close to the skin, making them well suited to everyday use.
+          Each glove was cut by hand and stitched finger by finger, using fine thread, with decorative stitching across the back.
+          The shape narrows gently at the wrist, designed to follow the form of the hand.
+          The work required good light, steady hands, and patience.
+          Gloves like these were worn for walking, visiting, church, and travel — not only practical, but a subtle sign of refinement.
+          In these gloves lives the quiet skill of everyday life — not only the hands that wore them, but the hands that made them.
+        </p>
+      </div>
 
       <p class="sr-only">
         A pair of ladies’ leather gloves, made around eighteen thirty to eighteen fifty.
@@ -57,21 +78,32 @@
 
       <h2>Needle</h2>
 
-<button
-  type="button"
-  class="quiet-button"
-  onclick="playEmbeddedAudio('needleAudio')">
-  Discover the needle
-</button>
+      <button
+        type="button"
+        class="quiet-button"
+        onclick="playSection('needleAudio', 'needleText')">
+        Discover the needle
+      </button>
 
-<p class="sr-only">
-  Small, sharp, and easily missed, with a tiny eye for thread.
-  It fits between finger and thumb, and would have been used thousands of times.
-  Made from hardened steel and carefully polished, it could pass smoothly through thin leather.
-  Drawn through the material again and again, it was used to sew gloves by hand — repetitive and precise.
-  Most often, this work was done by women at home, fitting paid sewing around daily responsibilities.
-  This needle reflects the unseen labour between raw material and finished artefact.
-</p>
+      <div id="needleText" class="discover-text" hidden>
+        <p>
+          Small, sharp, and easily missed, with a tiny eye for thread.
+          It fits between finger and thumb, and would have been used thousands of times.
+          Made from hardened steel and carefully polished, it could pass smoothly through thin leather.
+          Drawn through the material again and again, it was used to sew gloves by hand — repetitive and precise.
+          Most often, this work was done by women at home, fitting paid sewing around daily responsibilities.
+          This needle reflects the unseen labour between raw material and finished artefact.
+        </p>
+      </div>
+
+      <p class="sr-only">
+        Small, sharp, and easily missed, with a tiny eye for thread.
+        It fits between finger and thumb, and would have been used thousands of times.
+        Made from hardened steel and carefully polished, it could pass smoothly through thin leather.
+        Drawn through the material again and again, it was used to sew gloves by hand — repetitive and precise.
+        Most often, this work was done by women at home, fitting paid sewing around daily responsibilities.
+        This needle reflects the unseen labour between raw material and finished artefact.
+      </p>
 
     </section>
 
@@ -92,9 +124,23 @@
       }
     }
 
-    function playEmbeddedAudio(id) {
+    function hideAllText() {
+      document.querySelectorAll('.discover-text').forEach(section => {
+        section.hidden = true;
+      });
+    }
+
+    function playSection(audioId, textId) {
       stopCurrentAudio();
-      currentAudio = document.getElementById(id);
+      hideAllText();
+
+      currentAudio = document.getElementById(audioId);
+      const textBlock = document.getElementById(textId);
+
+      if (textBlock) {
+        textBlock.hidden = false;
+      }
+
       if (!currentAudio) return;
       currentAudio.currentTime = 0;
       currentAudio.play().catch(() => {});
