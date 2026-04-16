@@ -103,6 +103,13 @@
         This needle reflects the unseen labour between raw material and finished artefact.
       </p>
 
+      <button
+  type="button"
+  class="quiet-button center"
+  onclick="backToTop()">
+  Back to top
+</button>
+
     </section>
 
   </main>
@@ -113,37 +120,34 @@
   <audio id="needleAudio" src="audio/needle.mp3" preload="auto"></audio>
 
   <script>
-    let currentAudio = null;
+  let currentAudio = null;
 
-    function stopCurrentAudio() {
-      if (currentAudio) {
-        currentAudio.pause();
-        currentAudio.currentTime = 0;
-      }
-    }
-
-    function hideAllText() {
-      document.querySelectorAll('.discover-text').forEach(section => {
-        section.hidden = true;
-      });
-    }
-
-    function playSection(audioId, textId) {
-      stopCurrentAudio();
-      hideAllText();
-
-      currentAudio = document.getElementById(audioId);
-      const textBlock = document.getElementById(textId);
-
-      if (textBlock) {
-        textBlock.hidden = false;
-      }
-
-      if (!currentAudio) return;
+  function stopCurrentAudio() {
+    if (currentAudio) {
+      currentAudio.pause();
       currentAudio.currentTime = 0;
-      currentAudio.play().catch(() => {});
     }
-  </script>
+  }
 
+  function playEmbeddedAudio(id) {
+    stopCurrentAudio();
+    currentAudio = document.getElementById(id);
+    if (!currentAudio) return;
+    currentAudio.currentTime = 0;
+    currentAudio.play().catch(() => {});
+  }
+
+  function hideAllText() {
+    document.querySelectorAll('.discover-text').forEach(section => {
+      section.hidden = true;
+    });
+  }
+
+  function backToTop() {
+    stopCurrentAudio();
+    hideAllText();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+</script>
 </body>
 </html>
