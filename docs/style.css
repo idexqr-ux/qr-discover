@@ -181,6 +181,11 @@ h2 {
   box-shadow: 0 0 0 12px #E4ECE9;
 }
 
+.needle-image {
+  max-width: 40%;   /* ⬅️ smaller than gloves */
+  opacity: 0.95;    /* slight softening */
+}
+
 .intro {
   margin: 10px 0 14px;
   color: var(--muted);
