@@ -129,18 +129,26 @@
     }
   }
 
-  function playEmbeddedAudio(id) {
-    stopCurrentAudio();
-    currentAudio = document.getElementById(id);
-    if (!currentAudio) return;
-    currentAudio.currentTime = 0;
-    currentAudio.play().catch(() => {});
-  }
-
   function hideAllText() {
     document.querySelectorAll('.discover-text').forEach(section => {
       section.hidden = true;
     });
+  }
+
+  function playSection(audioId, textId) {
+    stopCurrentAudio();
+    hideAllText();
+
+    currentAudio = document.getElementById(audioId);
+    const textBlock = document.getElementById(textId);
+
+    if (textBlock) {
+      textBlock.hidden = false;
+    }
+
+    if (!currentAudio) return;
+    currentAudio.currentTime = 0;
+    currentAudio.play().catch(() => {});
   }
 
   function backToTop() {
@@ -149,5 +157,3 @@
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 </script>
-</body>
-</html>
