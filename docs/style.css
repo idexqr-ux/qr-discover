@@ -165,16 +165,20 @@ h2 {
   width: 100%;
   height: auto;
   margin: 0 auto 0.6rem; /* tighter spacing below */
-  opacity: 0.9;          /* softens it slightly */
+  opacity: 0.95;          /* softens it slightly */
 }
 
 .object-image {
   display: block;
-  max-width: 460px;      /* slightly larger presence */
-  width: 92%;
+  max-width: 85%;
   height: auto;
-  margin: 0 auto 1.4rem; /* a little more breathing room */
+  margin: 1.5rem auto;
   border-radius: 16px;
+  opacity: 0.95;
+}
+
+.object-image {
+  box-shadow: 0 0 0 12px #E4ECE9;
 }
 
 .intro {
