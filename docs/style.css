@@ -63,12 +63,8 @@ body {
 }
 
 .museum-logo {
-  max-width: 90px;
-}
-
-.museum-logo {
   display: block;
-  max-width: 70px;   /* ⬅️ smaller */
+  max-width: 75px;   /* ⬅️ smaller */
   width: 100%;
   height: auto;
   margin: 0 auto 0.6rem;
