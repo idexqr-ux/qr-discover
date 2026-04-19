@@ -103,6 +103,10 @@ h2 {
   color: var(--muted);
 }
 
+.discover-text {
+  margin-top: 12px;
+}
+
 /* ---------------------------------
    Cards
 --------------------------------- */
@@ -169,6 +173,15 @@ h2 {
 .quiet-button:focus {
   outline: 2px solid #7a8f88;
   outline-offset: 2px;
+}
+
+.chips button,
+.quiet-button {
+  margin-bottom: 10px;
+}
+
+.center-button {
+  margin-top: 24px;
 }
 
 /* ---------------------------------
