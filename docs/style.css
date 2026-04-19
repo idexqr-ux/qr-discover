@@ -62,6 +62,19 @@ body {
   margin-top: 32px;
 }
 
+.museum-logo {
+  max-width: 90px;
+}
+
+.museum-logo {
+  display: block;
+  max-width: 60px;   /* ⬅️ smaller */
+  width: 100%;
+  height: auto;
+  margin: 0 auto 0.6rem;
+  opacity: 0.85;
+}
+
 /* ---------------------------------
    Navigation
 --------------------------------- */
