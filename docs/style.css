@@ -232,7 +232,7 @@ h2 {
 }
 
 .discover-text p {
-  margin: 0;
+  margin-top: 16px;   /* slightly more than before */
 }
 
 .discover-text.intro-text {
