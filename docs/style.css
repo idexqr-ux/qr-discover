@@ -272,13 +272,17 @@ h2 {
 
 @media (max-width: 600px) {
   body {
-    font-size: 28px;
+    font-size: 19px;
+  }
+
+  .discover-text {
+    padding: 0.9rem 1rem;
   }
 
   .wrap {
     padding-top: 10px;
-    padding-left: 0.6px;
-    padding-right: 0.6px;
+    padding-left: 6px;
+    padding-right: 6px;
   }
 
   .hero h1 {
@@ -309,5 +313,13 @@ h2 {
     margin-bottom: 1rem;
     font-size: 1.3rem;
     color: #8a9692;
+  }
+
+  .object-image {
+    max-width: 75%;
+  }
+
+  .object-image.needle-image {
+    max-width: 60%;
   }
 }
