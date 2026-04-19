@@ -1,29 +1,18 @@
 :root {
   --bg: #F7F9F8;
-  --ink: #2b2b2b;
-  --muted: #5b6770;
+  --ink: #1a1a1a;
+  --muted: #6f7c78;
+  --muted-deep: #3f4a47;
+  --muted-soft: #9aa6a2;
 
-  --card: #F1F4F3;
-  --border: #d7dde3;
-
-  --button-bg: #C9D5D0;
-  --button-border: #B8C6C1;
-  --button-hover: #B8C6C1;
-
+  --button-bg: #c9d5d0;
+  --button-active: #AEBDB7;
   --panel-bg: #f7f9f8;
 }
 
 /* ---------------------------------
    Base
 --------------------------------- */
-
-* {
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-}
 
 body {
   margin: 0;
@@ -40,11 +29,6 @@ body {
   padding-top: 50px;
   text-align: center;
 }
-}
-
-/* ---------------------------------
-   Layout
---------------------------------- */
 
 .wrap {
   max-width: 860px;
@@ -52,218 +36,41 @@ body {
   padding: 18px 16px;
 }
 
-.hero {
-  margin-top: 6px;
-  margin-bottom: 1.4rem;
+/* ---------------------------------
+   Layout / alignment
+--------------------------------- */
+
+.hero,
+.tasks,
+.footer-wrap,
+.browse-label,
+.center-button {
   text-align: center;
-}
-
-.cards {
-  display: grid;
-  gap: 20px;
-}
-
-/* ---------------------------------
-   Typography
---------------------------------- */
-
-h1 {
-  margin: 6px 0;
-  font-size: 1.8rem;
-  line-height: 1.2;
-}
-
-h2 {
-  margin: 24px 0 8px;
-  font-size: 1.25rem;
-}
-
-.kicker {
-  margin: 0;
-  color: var(--muted);
-  letter-spacing: 0.02em;
-}
-
-.sub {
-  margin: 0 0 8px;
-  color: var(--muted);
-}
-
-.intro {
-  margin: 10px 0 14px;
-  font-size: 0.95rem;
-  color: var(--muted);
-}
-
-.muted-line {
-  margin: 12px 0;
-  font-size: 0.95rem;
-  color: var(--muted);
-}
-
-/* ---------------------------------
-   Cards
---------------------------------- */
-
-.card {
-  display: block;
-  margin: 18px 0;
-  padding: 16px;
-
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: 16px;
-
-  text-decoration: none;
-  color: inherit;
-  line-height: 1.6;
-}
-
-/* ---------------------------------
-   Buttons
---------------------------------- */
-
-.quiet-button {
-  display: inline-block;
-  min-width: 220px;
-  padding: 0.8rem 1.1rem;
-
-  background: var(--button-bg);
-  border: 1px solid var(--button-border);
-  border-radius: 999px;
-  transition: transform 0.08s ease, background 0.08s ease;
-
-  font: inherit;
-  font-size: 0.98rem;
-  line-height: 1.2;
-  letter-spacing: 0.02em;
-  color: var(--ink);
-
-  text-align: center;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-.quiet-button:hover,
-.quiet-button:focus {
-  background: var(--button-hover);
-  border-color: #AEBDB7;
-}
-
-.quiet-button:active {
-  background: #AEBDB7;
-  transform: scale(0.98);
-}
-
-.quiet-button.center {
-  display: block;
-  margin: 2rem auto 0;
-}
-
-.quiet-button:focus {
-  outline: 2px solid #7a8f88;
-  outline-offset: 2px;
-}
-
-.chips button,
-.quiet-button {
-  margin-bottom: 10px;
 }
 
 .center-button {
-  margin-top: 24px;
+  margin-top: 2rem;
 }
 
-/* ---------------------------------
-   Button groups
---------------------------------- */
-
-.listen-group {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 0.75rem;
-  margin-top: 1.5rem;
-  margin-bottom: 0.5rem;
-}
-
-/* ---------------------------------
-   Images
---------------------------------- */
-
-.museum-logo {
-  display: block;
-  width: 100%;
-  max-width: 90px;
-  height: auto;
-  margin: 0 auto 0.6rem;
-  opacity: 0.95;
-}
-
-.object-image {
-  display: block;
-  max-width: 55%;
-  height: auto;
-  margin: 1.5rem auto 1rem;
-  border-radius: 16px;
-  opacity: 0.95;
-
-  box-shadow: 0 0 0 12px #E4ECE9;
-}
-
-.object-image.needle-image {
-  max-width: 45%;
-}
-
-/* ---------------------------------
-   Discover text panels
---------------------------------- */
-
-.discover-text {
-  margin-top: 1rem;
-  padding: 1rem 1.25rem;
-
-  background: var(--panel-bg);
-  border-radius: 16px;
-
-  text-align: left;
-}
-
-.discover-text p {
-  margin-top: 16px;   /* slightly more than before */
-}
-
-.discover-text.intro-text {
+.footer-wrap {
+  margin-top: 32px;
   text-align: center;
 }
 
-/* ---------------------------------
-   Navigation / footer
---------------------------------- */
-
-.back-link {
-  display: inline-block;
-  margin-top: 20px;
-  padding-bottom: 2px;
-
-  color: var(--ink);
-  text-decoration: none;
-  border-bottom: none;
-}
-
-.secondary-link {
+.footer-wrap .back-link {
   display: block;
   margin-top: 32px;
-  margin-bottom: 8px;
-  font-size: 0.95rem;
-  opacity: 0.85;
-  text-align: center;
 }
 
-.secondary-link,
-.secondary-link:visited {
+/* ---------------------------------
+   Navigation
+--------------------------------- */
+
+.back-link,
+.back-link:visited {
   color: #2b2b2b;
   text-decoration: none;
+  border-bottom: none;
 }
 
 .back-button {
@@ -272,18 +79,162 @@ h2 {
   font-size: 0.95rem;
 }
 
-.footer {
-  padding: 28px 0 36px;
+/* ---------------------------------
+   Typography
+--------------------------------- */
+
+.place {
+  margin-bottom: 0.8rem;
+  font-size: 0.9rem;
+  letter-spacing: 0.02em;
+  text-align: center;
+  color: var(--muted-deep);
+}
+
+.kicker {
+  margin-bottom: 0.1rem;
+  font-size: 2rem;
+  letter-spacing: 0.04em;
+  text-align: center;
+  color: var(--muted-deep);
+}
+
+.hero h1 {
+  margin-bottom: 10px;
+  font-size: 2.2rem;
+  font-weight: normal;
+}
+
+h2 {
+  margin-top: 20px;
+  margin-bottom: 6px;
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
+.light-heading {
+  margin-top: 0;
+  margin-bottom: 1.2rem;
+  font-size: 1.5rem;
+  font-weight: 400;
+  text-align: center;
+  color: var(--muted-soft);
+}
+
+.intro {
+  margin-bottom: 1.5rem;
+  font-size: 0.8rem;
+  text-align: center;
   color: var(--muted);
 }
 
 .powered-by {
-  margin-top: 33px;
-  margin-bottom: 10px;
-  font-size: 0.85rem;
-  color: var(--muted);
+  margin-top: 30px;
+  font-size: 0.9rem;
+  font-weight: normal;
   text-align: center;
-  opacity: 0.7;
+  color: var(--muted);
+}
+
+/* ---------------------------------
+   Buttons
+--------------------------------- */
+
+.quiet-button {
+  display: inline-block;
+  margin: 12px 0 24px;
+  padding: 16px 26px;
+  border: none;
+  border-radius: 999px;
+
+  background: var(--button-bg);
+  color: var(--ink);
+
+  font: inherit;
+  font-size: 1.22rem;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+
+  transition: transform 0.08s ease, background 0.08s ease;
+}
+
+.hero .quiet-button {
+  font-size: 1.05rem;
+}
+
+.quiet-button:active {
+  background: var(--button-active);
+  transform: scale(0.98);
+}
+
+.quiet-button:focus {
+  outline: 2px solid #7a8f88;
+  outline-offset: 2px;
+}
+
+/* ---------------------------------
+   Browse chips
+--------------------------------- */
+
+.chips {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  margin: 1.7rem 0;
+}
+
+.chip-item {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.chips button {
+  margin: 8px 6px 12px;
+  padding: 18px 30px;
+  border: none;
+  border-radius: 999px;
+
+  background: var(--button-bg);
+  color: var(--ink);
+
+  font: inherit;
+  font-size: 1.25rem;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+
+  transition: transform 0.08s ease, background 0.08s ease;
+}
+
+.chips button:active {
+  background: var(--button-active);
+  transform: scale(0.97);
+}
+
+.chips button:focus {
+  outline: 2px solid #7a8f88;
+  outline-offset: 2px;
+}
+
+.chips button.selected {
+  background: var(--button-active);
+  border: 1px solid #9EAEA8;
+}
+
+/* ---------------------------------
+   Content panels
+--------------------------------- */
+
+.discover-text {
+  margin-top: 1rem;
+  padding: 1rem 1.25rem;
+  border-radius: 16px;
+  background: var(--panel-bg);
+  text-align: left;
+}
+
+.discover-text p {
+  margin: 0;
 }
 
 /* ---------------------------------
@@ -348,4 +299,3 @@ h2 {
     color: #8a9692;
   }
 }
-
