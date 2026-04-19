@@ -128,8 +128,10 @@ h2 {
   text-align: center;
 }
 
-.back-link:hover {
-  border-bottom-color: rgba(43,43,43,0.5);
+.back-button {
+  display: inline-block;
+  margin-bottom: 16px;
+  font-size: 0.95rem;
 }
 
 .footer {
