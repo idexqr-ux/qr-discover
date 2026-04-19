@@ -253,9 +253,18 @@ h2 {
   border-bottom: 1px solid rgba(43, 43, 43, 0.25);
 }
 
-.back-link,
-.back-link:visited {
-  color: #2b2b2b;        /* same as normal text */
+.secondary-link {
+  display: block;
+  margin-top: 18px;
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+  opacity: 0.85;
+  text-align: center;
+}
+
+.secondary-link,
+.secondary-link:visited {
+  color: #2b2b2b;
   text-decoration: none;
 }
 
