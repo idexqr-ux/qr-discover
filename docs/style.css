@@ -302,3 +302,50 @@ h2 {
   white-space: nowrap !important;
   border: 0 !important;
 }
+
+/* ---------------------------------
+   Mobile phone screen
+--------------------------------- */
+
+@media (max-width: 600px) {
+  body {
+    font-size: 28px;
+  }
+
+  .wrap {
+    padding-top: 10px;
+    padding-left: 0.6px;
+    padding-right: 0.6px;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .kicker {
+    font-size: 2.1rem;
+  }
+
+  .intro {
+    font-size: 1rem;
+  }
+
+  h2 {
+    margin-top: 20px;
+    margin-bottom: 6px;
+    font-size: 1.6rem;
+  }
+
+  .quiet-button {
+    margin: 8px 0 18px;
+    padding: 18px 30px;
+    font-size: 1.25rem;
+  }
+
+  .light-heading {
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+    color: #8a9692;
+  }
+}
+
