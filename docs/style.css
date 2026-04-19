@@ -162,6 +162,15 @@ h2 {
   margin: 2rem auto 0;
 }
 
+.quiet-button {
+  transition: transform 0.08s ease, background 0.08s ease;
+}
+
+.quiet-button:focus {
+  outline: 2px solid #7a8f88;
+  outline-offset: 2px;
+}
+
 /* ---------------------------------
    Button groups
 --------------------------------- */
