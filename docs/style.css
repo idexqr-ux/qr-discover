@@ -64,10 +64,10 @@ body {
 
 .museum-logo {
   display: block;
-  max-width: 75px;   /* ⬅️ smaller */
+  max-width: 140px;   /* ⬅️ smaller */
   width: 100%;
   height: auto;
-  margin: 0 auto 0.6rem;
+  margin: 1.1rem auto 1.2rem;
   opacity: 0.9;
 }
 
