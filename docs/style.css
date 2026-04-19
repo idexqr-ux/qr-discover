@@ -103,10 +103,6 @@ h2 {
   color: var(--muted);
 }
 
-.discover-text {
-  margin-top: 12px;
-}
-
 /* ---------------------------------
    Cards
 --------------------------------- */
@@ -132,12 +128,12 @@ h2 {
 .quiet-button {
   display: inline-block;
   min-width: 220px;
-  margin: 10px 0;
   padding: 0.8rem 1.1rem;
 
   background: var(--button-bg);
   border: 1px solid var(--button-border);
   border-radius: 999px;
+  transition: transform 0.08s ease, background 0.08s ease;
 
   font: inherit;
   font-size: 0.98rem;
@@ -164,10 +160,6 @@ h2 {
 .quiet-button.center {
   display: block;
   margin: 2rem auto 0;
-}
-
-.quiet-button {
-  transition: transform 0.08s ease, background 0.08s ease;
 }
 
 .quiet-button:focus {
