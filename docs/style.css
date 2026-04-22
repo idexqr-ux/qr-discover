@@ -1,13 +1,18 @@
 :root {
-  :root {
   --bg: linear-gradient(180deg, #cfe8d6 0%, #e8f3ec 100%);
   --ink: #1f3d2b;
-  --muted: #6f7c78;
-  --muted-deep: #3f4a47;
-  --muted-soft: #9aa6a2;
-  --button-bg: #c9d5d0;
-  --button-active: #AEBDB7;
-  --panel-bg: #f7f9f8;
+
+  --muted: #5f7a68;
+  --muted-deep: #3f5a49;
+  --muted-soft: #8fa59a;
+
+  --line: rgba(31, 61, 43, 0.16);
+  --card: rgba(255, 255, 255, 0.72);
+  --panel-bg: rgba(255, 255, 255, 0.64);
+
+  --button-bg: rgba(255, 255, 255, 0.88);
+  --button-border: rgba(31, 61, 43, 0.18);
+  --button-active: #aebdb7;
 }
 
 /* ---------------------------------
@@ -156,7 +161,7 @@ h2 {
   display: inline-block;
   margin: 10px 0 20px;
   padding: 16px 26px;
-  border: none;
+  border: 1px solid var(--button-border);
   border-radius: 999px;
   background: var(--button-bg);
   color: var(--ink);
@@ -164,9 +169,18 @@ h2 {
   font-size: 1.22rem;
   letter-spacing: 0.04em;
   cursor: pointer;
+  text-decoration: none;
   transition: transform 0.08s ease, background 0.08s ease;
 }
 
+.discover-text {
+  margin-top: 0.8rem;
+  padding: 1rem 1.25rem;
+  border-radius: 16px;
+  background: var(--panel-bg);
+  border: 1px solid var(--line);
+  text-align: left;
+}
 .hero .quiet-button {
   font-size: 1.05rem;
 }
