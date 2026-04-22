@@ -1,18 +1,16 @@
 :root {
-  --bg: linear-gradient(180deg, #cfe8d6 0%, #e8f3ec 100%);
-  --ink: #1f3d2b;
+  --bg: #F7F9F8;
+  --ink: #1a1a1a;
+  --muted: #6f7c78;
+  --muted-deep: #3f4a47;
+  --muted-soft: #9aa6a2;
 
-  --muted: #5f7a68;
-  --muted-deep: #3f5a49;
-  --muted-soft: #8fa59a;
+  --button-bg: #c9d5d0;
+  --button-active: #AEBDB7;
+  --panel-bg: #f7f9f8;
 
-  --line: rgba(31, 61, 43, 0.16);
-  --card: rgba(255, 255, 255, 0.72);
-  --panel-bg: rgba(241, 247, 243, 0.9);
-
-  --button-bg: #dfeae3;
-  --button-border: #b7cbbf;
-  --button-active: #c8d8cf;
+  --button-border: #b7c5bf;
+  --line: rgba(0,0,0,0.08);
 }
 
 /* ---------------------------------
