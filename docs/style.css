@@ -1,10 +1,10 @@
 :root {
-  --bg: #F7F9F8;
-  --ink: #1a1a1a;
+  :root {
+  --bg: linear-gradient(180deg, #cfe8d6 0%, #e8f3ec 100%);
+  --ink: #1f3d2b;
   --muted: #6f7c78;
   --muted-deep: #3f4a47;
   --muted-soft: #9aa6a2;
-
   --button-bg: #c9d5d0;
   --button-active: #AEBDB7;
   --panel-bg: #f7f9f8;
