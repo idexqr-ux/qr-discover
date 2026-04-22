@@ -8,11 +8,11 @@
 
   --line: rgba(31, 61, 43, 0.16);
   --card: rgba(255, 255, 255, 0.72);
-  --panel-bg: rgba(255, 255, 255, 0.64);
+  --panel-bg: rgba(241, 247, 243, 0.9);
 
-  --button-bg: rgba(255, 255, 255, 0.88);
-  --button-border: rgba(31, 61, 43, 0.18);
-  --button-active: #aebdb7;
+  --button-bg: #dfeae3;
+  --button-border: #b7cbbf;
+  --button-active: #c8d8cf;
 }
 
 /* ---------------------------------
