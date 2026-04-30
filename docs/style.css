@@ -384,12 +384,10 @@ h2 {
   }
 
 .gloves-image {
-  display: block;
-  width: 100%;
+  max-width: 80%;
   height: auto;
-  margin: 0 auto 1.25rem;
-  border-radius: 16px;
-  max-width: 340px;
+  display: block;
+  margin: 0 auto;
 }
 
 .needle-image {
