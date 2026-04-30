@@ -11,6 +11,7 @@
 
   --button-border: #b7c5bf;
   --line: rgba(0,0,0,0.08);
+  --sapphire-accent: #2F5DA8;
 }
 
 /* ---------------------------------
@@ -89,6 +90,28 @@ body {
   display: inline-block;
   margin-bottom: 16px;
   font-size: 0.95rem;
+}
+
+.stop-inline {
+  display: inline-block;
+  background: #EAF1ED;
+  border: 1px solid #C9D5D0;
+  border-radius: 999px;
+  padding: 0.8rem 1.1rem;
+  font: inherit;
+  font-size: 0.98rem;
+  color: var(--sapphire-accent);
+  cursor: pointer;
+  line-height: 1.2;
+  text-decoration: none;
+  min-width: 220px;
+  text-align: center;
+}
+
+.stop-inline:hover,
+.stop-inline:focus {
+  background: #DDE9E3;
+  border-color: #B8C6C1;
 }
 
 /* ---------------------------------
