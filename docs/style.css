@@ -383,18 +383,19 @@ h2 {
     color: #8a9692;
   }
 
-.object-image {
+.gloves-image {
   display: block;
   width: 100%;
   height: auto;
   margin: 0 auto 1.25rem;
   border-radius: 16px;
-}
-
-.gloves-image {
   max-width: 340px;
 }
 
 .needle-image {
-  max-width: 420px;
+  display: block;
+  max-width: 350px;
+  width: 100%;
+  height: auto;
+  margin: 0 auto 1.25rem;
 }
