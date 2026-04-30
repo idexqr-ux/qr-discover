@@ -384,9 +384,9 @@ h2 {
   }
 
 .gloves-image {
-  width: 60%;
-  max-width: 250px;
-  height: auto;
+  width: 60% !important;
+  max-width: 250px !important;
+  height: auto !important;
   display: block;
   margin: 0 auto;
 }
