@@ -31,6 +31,10 @@
         Let's discover
       </button>
 
+      <button type="button" class="stop-inline" onclick="stopCurrentAudio()">
+      Stop audio
+      </button>
+
       <div id="museumText" class="discover-text intro-text" hidden>
         <p>
           Let's take a look together.
@@ -49,6 +53,10 @@
         class="quiet-button"
         onclick="playSection('glovesAudio', 'glovesText')">
         Discover the gloves
+      </button>
+
+      <button type="button" class="stop-inline" onclick="stopCurrentAudio()">
+      Stop audio
       </button>
 
       <div id="glovesText" class="discover-text" hidden>
@@ -79,6 +87,10 @@
         class="quiet-button"
         onclick="playSection('needleAudio', 'needleText')">
         Discover the needle
+      </button>
+
+      <button type="button" class="stop-inline" onclick="stopCurrentAudio()">
+      Stop audio
       </button>
 
       <div id="needleText" class="discover-text" hidden>
@@ -160,3 +172,5 @@
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 </script>
+
+  
