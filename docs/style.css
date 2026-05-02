@@ -116,6 +116,12 @@ body {
   border-color: #B8C6C1;
 }
 
+.discover-text,
+.audio-controls,
+.button-wrap {
+  text-align: center;
+}
+
 /* ---------------------------------
    Typography
 --------------------------------- */
