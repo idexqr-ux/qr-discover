@@ -177,6 +177,30 @@ h2 {
 }
 
 /* ---------------------------------
+   Images
+--------------------------------- */
+
+.gloves-image {
+  width: 60%;
+  max-width: 250px;
+  height: auto;
+  display: block;
+  margin: 0 auto 1.25rem;
+}
+
+.needle-image {
+  display: block;
+  max-width: 350px;
+  width: 100%;
+  height: auto;
+  margin: 0 auto 1.25rem;
+}
+
+/* ---------------------------------
+   Buttons
+--------------------------------- */
+
+/* ---------------------------------
    Buttons
 --------------------------------- */
 
@@ -383,18 +407,3 @@ h2 {
     color: #8a9692;
   }
 
-.gloves-image {
-  width: 60% !important;
-  max-width: 250px !important;
-  height: auto !important;
-  display: block;
-  margin: 0 auto;
-}
-
-.needle-image {
-  display: block;
-  max-width: 350px;
-  width: 100%;
-  height: auto;
-  margin: 0 auto 1.25rem;
-}
